@@ -2,9 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Створення форм за допомогою HTML</title>
 </head>
 <body>
-
+<table border="1">
+    <tr>
+        <td colspan="2" align="center"> ФЫР ШОП 228</td>
+    </tr>
+    <tr>
+        <td >Имя:</td>
+        <td>
+            <form>
+            <label for="name"></label>
+            <input type="text" id="name" name="user_name" required>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td >Ориентация:</td>
+        <td>
+            <form>
+                <label>
+                    <input type="radio" name="question" value="Север">
+                        Север
+                </label>
+                    <br>
+                <label>
+                    <input type="radio" name="question" value="Я хочу что бы ты верил">
+                    Я хочу что бы ты верил
+                </label>
+                    <br>
+                <label>
+                    <input type="radio" name="question" value="Я хочу что бы ты плакал">
+                    Я хочу что бы ты плакал
+                </label>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td >Стартовый покемон:</td>
+        <td> <select>
+            <option value="1">Пикачу</option>
+            <option value="2">Пашь</option>
+            <option value="3">Чармандер</option>
+            <option value="4">Сквиртл</option>
+            <option value="5">Бульбазавр</option>
+        </select> </td>
+    </tr>
+    <tr>
+        <td > Which of the following table types are included in data orchestration?</td>
+        <td>
+            <form action="handler.php">
+                <p><input type="checkbox" name="a" > XDR</p>
+                <p><input type="checkbox" name="a" checked > SDR</p>
+                <p><input type="checkbox" name="a" checked > CFG</p>
+                <p><input type="checkbox" name="a" checked > DIM</p>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"> Как прошёл твой день?
+            <p>
+            <label for="msg"></label>
+                <textarea id="msg" name="user_message"></textarea> </p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"> <button type="submit">Отправить</button>
+        </td>
+    </tr>
 </body>
 </html>
