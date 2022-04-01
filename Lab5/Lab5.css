@@ -1,0 +1,36 @@
+
+
+.container {
+    display: grid;
+    grid-template-areas:
+            'sidebar header header'
+            'sidebar content content'
+            'sidebar banners banners';
+}
+.item {
+    padding: 10px;
+    border: 1px solid black;
+}
+.background{
+    background: #bad9bb;
+    border-radius: 10px;
+}
+.sidebar{
+    grid-area: sidebar;
+
+}
+.photo{
+    border-radius: 10px;
+
+}
+.header{
+    grid-area: header;
+}
+
+.content{
+    grid-area: content;
+}
+.banners{
+    grid-area: content;
+}
+
