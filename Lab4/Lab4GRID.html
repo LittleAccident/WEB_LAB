@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .container {
+      grid-template-rows: 50px repeat(5,50px);
+      grid-template-columns: repeat(4, 50px);
+      justify-content: start;
+      display: grid;
+
+
+    }
+    .item {
+      padding 10px;
+      border: 1px solid black;
+      color: aliceblue;
+      line-height: 2.5;
+      background: gray;
+      text-align: center;
+
+    }
+    .item_1 {
+      grid-column: 1/5;
+      background: #5c5959;
+      text-align: right;
+
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      font-size: 28px;
+
+
+    }
+    .item_2 {
+      background: linear-gradient(200grad, gray, #3b3939);
+      text-align: center;
+    }
+    .item_3 {
+      background: purple;
+    }
+    .item_6 {
+      background: purple;
+      border-bottom-right-radius: 10px;
+    }
+    .item_4 {
+      background: gray;
+    }
+    .item_5 {
+      grid-column: 1/3;
+      border-bottom-left-radius: 10px;
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item item_1">0</div>
+    <div class="item item_2">AC</div>
+    <div class="item item_2">+/-</div>
+    <div class="item item_2">%</div>
+    <div class="item item_3">/</div>
+    <div class="item item_4">7</div>
+    <div class="item item_4">8</div>
+    <div class="item item_4">9</div>
+    <div class="item item_3">*</div>
+    <div class="item item_4">4</div>
+    <div class="item item_4">5</div>
+    <div class="item item_4">6</div>
+    <div class="item item_3">-</div>
+    <div class="item item_4">1</div>
+    <div class="item item_4">2</div>
+    <div class="item item_4">3</div>
+    <div class="item item_3">+</div>
+    <div class="item item_5">0</div>
+    <div class="item item_4">,</div>
+    <div class="item item_6" >=</div>
+  </div>
+
+</body>
+</html>
