@@ -1,36 +1,282 @@
-
-
 .container {
     display: grid;
     grid-template-areas:
-            'sidebar header header'
-            'sidebar content content'
-            'sidebar banners banners';
+                            'sidebar button button button'
+                            'sidebar content content content'
+                            'sidebar content content content'
+                            'sidebar content content content'
+                            'sidebar content content content';
+
+    background: #e4ebee;
+    border-radius: 10px;
+
 }
 .item {
     padding: 10px;
-    border: 1px solid black;
+
 }
-.background{
-    background: #bad9bb;
+.button{
+    display: grid;
+    grid-template-areas: 'about resume portfolio blog contact';
+    grid-area: button;
+    padding: 10px;
+    height: 20px;
+    justify-content: right;
+    margin: 0 10px;
     border-radius: 10px;
 }
-.sidebar{
-    grid-area: sidebar;
+.about{
+    grid-area: about;
+    background: #76b5f3;
+}
+.resume{
+    grid-area: resume;
+}
+.portfolio{
+    grid-area: portfolio;
+}
+.blog{
+    grid-area: blog;
+}
+.contact{
+    grid-area: contact;
+}
 
+.sidebar{
+    display: grid;
+    grid-template-areas:    'photo photo photo'
+                            'name name name'
+                            'dol dol dol'
+                            'social social social'
+                            'contacts contacts contacts'
+                            'download download download';
+    grid-area: sidebar;
+    border-radius: 10px;
+    background: #b2c7d0;
+    justify-content: center;
+    justify-self: center;
+    width: 250px;
+    height: auto;
+}
+.sidebaritem{
+    grid-area: sidebaritem;
+    justify-content: center;
+    justify-self: center;
 }
 .photo{
+    grid-area: photo;
+    border-radius: 60px;
+    background-image:url(svetiko.jpg);
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 45px;
+}
+.name{
+    grid-area: name;
+}
+.dol{
+    grid-area: dol;
+    width: auto ;
     border-radius: 10px;
+    height: 22px;
+    background-color: rgba(236, 232, 232, 0.41);
+    margin: 5px;
+}
+.social {
+    display: grid;
+    grid-area: social;
+    grid-template-areas: 'facebook twitter linkedin';
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 5px 5px 10px 5px;
+}
+.facebook{
+    grid-area: facebook;
+    background-image:url(facebook.png);
+}
+.twitter{
+    grid-area: twitter;
+    background-image:url(twitter.png);
+}
+.linkedin{
+    grid-area: linkedin;
+    background-image:url(linkedin.png);
+}
+.download{
+    display: grid;
+    grid-template-areas: 'downloadimg downloadt';
+    grid-area: download;
+    border-radius: 10px;
+    background-color: rgba(116, 174, 231, 0.79);
+    height: 40px;
+
 
 }
-.header{
-    grid-area: header;
+.downloadimg{
+    grid-area: downloadimg;
+    background-image: url("download.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    margin: 10px;
 }
+.downloadt{
+    grid-area: downloadt;
+    line-height: 2.3;
+}
+.contacts {
+    grid-area: contacts;
+    grid-template-areas:    'birthday birthdayt'
+                            'geo geot'
+                            'email emailt'
+                            'number numbert'
+                            'skype skypet';
+}
+.contactsitem{
+    grid-area: contactsitem;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    justify-content: left;
+    margin: 4px;
+    width: 30px;
+    height: 20px;
+}
+.birthday{
+    grid-area: birthday;
+    background-image: url("calendar.png");
+
+}
+.geo{
+    grid-area: geo;
+    background-image: url("marker.png");
+}
+.email{
+    grid-area: email;
+    background-image: url("mail.png");
+}
+.number{
+    grid-area: number;
+    background-image: url("phone.png");
+}
+.skype{
+    grid-area: skype;
+    background-image: url("skype.png");
+
+}
+.birthdayt{
+    grid-area: birthdayt;
+
+}
+.geot{
+    grid-area: geot;
+}
+.emailt{
+    grid-area: emailt;
+}
+.numbert{
+    grid-area: numbert;
+}
+.skypet{
+    grid-area: skypet;
+}
+
+
+
+
+
+
 
 .content{
     grid-area: content;
+    display: grid;
+    grid-template-areas:    'aboutme'
+                            'whatd';
 }
-.banners{
-    grid-area: content;
+.aboutme{
+    grid-area: aboutme;
+    margin: 10px;
+}
+.whatd{
+    display: grid;
+    grid-area: whatd;
+    grid-template-areas:    'tagtext tagtext'
+                            'tag tag1'
+                            'tag2 tag3';
+}
+.tagtext{
+    grid-area: tagtext;
+}
+.itemborder{
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: auto;
+    margin: 10px;
+}
+.itemtag{
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.tag{
+    grid-template-areas:    'img'
+                            'text';
+    grid-area: tag;
+    margin: 5px;
+    text-align: center;
+}
+.img{
+    grid-area: img;
+    background-image: url("1.png");
+
+}
+.text{
+    grid-area: text;
+    word-break: break-all;
+
+}
+.tag1{
+    grid-template-areas:    'img1'
+                            'text1';
+    grid-area: tag1;
+
+}
+.img1{
+    grid-area: img1;
+    background-image: url("2.png");
+
+}
+.text1{
+    grid-area: text1;
+}
+.tag2{
+    grid-template-areas:    'img2'
+                            'text2';
+    grid-area: tag2;
+}
+.img2{
+    grid-area: img2;
+    background-image: url("3.png");
+}
+.text2{
+    grid-area: text2;
+}
+.tag3{
+    grid-template-areas:    'img3'
+                            'text3';
+    grid-area: tag3;
+}
+.img3{
+    grid-area: img3;
+    background-image: url("4.png");
+}
+.text3{
+    grid-area: text3;
 }
 
