@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
   <style>
     .container {
       grid-template-rows: 50px repeat(5,50px);
       grid-template-columns: repeat(4, 50px);
       justify-content: start;
       display: grid;
+    }
 
+    .btm {
+      cursor: pointer;
+      user-select: none;
+    }
 
+    .btm:active {
+      filter: brightness(90%);
     }
     .item {
       padding: 10px;
@@ -55,28 +62,28 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="item item_1">0</div>
-    <div class="item item_2">AC</div>
-    <div class="item item_2">+/-</div>
-    <div class="item item_2">%</div>
-    <div class="item item_3">/</div>
-    <div class="item item_4">7</div>
-    <div class="item item_4">8</div>
-    <div class="item item_4">9</div>
-    <div class="item item_3">*</div>
-    <div class="item item_4">4</div>
-    <div class="item item_4">5</div>
-    <div class="item item_4">6</div>
-    <div class="item item_3">-</div>
-    <div class="item item_4">1</div>
-    <div class="item item_4">2</div>
-    <div class="item item_4">3</div>
-    <div class="item item_3">+</div>
-    <div class="item item_5">0</div>
-    <div class="item item_4">,</div>
-    <div class="item item_6">=</div>
-  </div>
+<div class="container">
+  <div class="item item_1">0</div>
+  <div class="item btm item_2">AC</div>
+  <div class="item btm item_2">+/-</div>
+  <div class="item btm item_2">%</div>
+  <div class="item btm item_3">/</div>
+  <div class="item btm item_4">7</div>
+  <div class="item btm item_4">8</div>
+  <div class="item btm item_4">9</div>
+  <div class="item btm item_3">*</div>
+  <div class="item btm item_4">4</div>
+  <div class="item btm item_4">5</div>
+  <div class="item btm item_4">6</div>
+  <div class="item btm item_3">-</div>
+  <div class="item btm item_4">1</div>
+  <div class="item btm item_4">2</div>
+  <div class="item btm item_4">3</div>
+  <div class="item btm item_3">+</div>
+  <div class="item btm item_5">0</div>
+  <div class="item btm item_4">,</div>
+  <div class="item btm item_6">=</div>
+</div>
 
 </body>
 </html>
