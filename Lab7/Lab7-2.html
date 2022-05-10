@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>purum</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    function summOfSimpleNums() {
+        let l = [];
+
+        let i = 1;
+        while(true){
+
+            let isSimple = true;
+            for(let y = 2; y < i; y++){
+
+                if(i%y===0){
+
+                    isSimple = false;
+                    break;
+                }
+            }
+
+            if (isSimple){
+
+                l.push(i);
+            }
+
+            i++;
+
+            if(l.length===5){
+
+                let summ = 0;
+                for (let x = 0 ; x < l.length; x++){
+                    summ += l[x];
+
+                }
+                return (summ);
+
+            }
+        }
+    }
+
+    alert(summOfSimpleNums());
+
+</script>
+
+</body>
+</html>

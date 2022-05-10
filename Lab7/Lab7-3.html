@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>purum</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    alert(numbers(5));
+
+    function numbers(n) {
+
+        let summ = 0;
+
+        for (let x = 1; x <=n; x ++){
+
+            let num = "";
+
+            for (let y = 1 ; y <= x ; y++){
+
+                num +="1";
+            }
+
+            summ += parseInt(num);
+        }
+
+        return summ;
+    }
+
+</script>
+
+</body>
+</html>
