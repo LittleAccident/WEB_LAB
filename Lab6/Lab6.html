@@ -1,48 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>ПУРУМ</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas:
+                            'sidebar button button button'
+                            'sidebar content content content'
+                            'sidebar content content content'
+                            'sidebar content content content'
+                            'sidebar content content content';
+
+            background: #e4ebee;
+            border-radius: 10px;
+
+        }
+        .item {
+            padding: 10px;
+
+        }
+        .button{
+            display: grid;
+            grid-template-areas: 'about resume portfolio blog contact';
+            grid-area: button;
+            padding: 10px;
+            height: 40px;
+            justify-content: right;
+            margin: 0 10px;
+            border-radius: 10px;
+        }
+        .about{
+            grid-area: about;
+            background: #76b5f3;
+        }
+        .resume{
+            grid-area: resume;
+        }
+        .portfolio{
+            grid-area: portfolio;
+        }
+        .blog{
+            grid-area: blog;
+        }
+        .contact{
+            grid-area: contact;
+        }
+
+        .sidebar{
+            display: grid;
+            grid-template-areas:    'photo photo photo'
+                            'name name name'
+                            'dol dol dol'
+                            'social social social'
+                            'contacts contacts contacts'
+                            'download download download';
+            grid-area: sidebar;
+            border-radius: 10px;
+            background: #b2c7d0;
+            justify-content: center;
+            justify-self: center;
+            width: 250px;
+            height: auto;
+        }
+        .sidebaritem{
+            grid-area: sidebaritem;
+            justify-content: center;
+            justify-self: center;
+        }
+        .photo{
+            grid-area: photo;
+            border-radius: 60px;
+            background-image:url(svetiko.jpg);
+            width: 200px;
+            height: 200px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 45px;
+        }
+        .name{
+            grid-area: name;
+        }
+        .dol{
+            grid-area: dol;
+            width: auto ;
+            border-radius: 10px;
+            height: 22px;
+            background-color: rgba(236, 232, 232, 0.41);
+            margin: 5px;
+        }
+        .social {
+            display: grid;
+            grid-area: social;
+            grid-template-areas: 'facebook twitter linkedin';
+            height: 40px;
+            width: 40px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 5px 5px 10px 5px;
+        }
+        .facebook{
+            grid-area: facebook;
+            background-image:url(facebook.png);
+        }
+        .twitter{
+            grid-area: twitter;
+            background-image:url(twitter.png);
+        }
+        .linkedin{
+            grid-area: linkedin;
+            background-image:url(linkedin.png);
+        }
+        .download{
+            display: grid;
+            grid-template-areas: 'downloadimg downloadt';
+            grid-area: download;
+            border-radius: 10px;
+            background-color: rgba(116, 174, 231, 0.79);
+            height: 40px;
+
+
+        }
+        .downloadimg{
+            grid-area: downloadimg;
+            background-image: url("download.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 20px;
+            margin: 10px;
+        }
+        .downloadt{
+            grid-area: downloadt;
+            line-height: 2.3;
+        }
+        .contacts {
+            grid-area: contacts;
+            grid-template-areas:    'birthday birthdayt'
+                            'geo geot'
+                            'email emailt'
+                            'number numbert'
+                            'skype skypet';
+        }
+        .contactsitem{
+            grid-area: contactsitem;
+            background-size: 20px;
+            background-repeat: no-repeat;
+            justify-content: left;
+            margin: 4px;
+            width: 30px;
+            height: 20px;
+        }
+        .birthday{
+            grid-area: birthday;
+            background-image: url("calendar.png");
+
+        }
+        .geo{
+            grid-area: geo;
+            background-image: url("marker.png");
+        }
+        .email{
+            grid-area: email;
+            background-image: url("mail.png");
+        }
+        .number{
+            grid-area: number;
+            background-image: url("phone.png");
+        }
+        .skype{
+            grid-area: skype;
+            background-image: url("skype.png");
+
+        }
+        .birthdayt{
+            grid-area: birthdayt;
+
+        }
+        .geot{
+            grid-area: geot;
+        }
+        .emailt{
+            grid-area: emailt;
+        }
+        .numbert{
+            grid-area: numbert;
+        }
+        .skypet{
+            grid-area: skypet;
+        }
+
+
+
+
+
+
+
+        .content{
+            grid-area: content;
+            display: grid;
+            grid-template-areas:    'aboutme'
+                            'whatd';
+        }
+        .aboutme{
+            grid-area: aboutme;
+            margin: 10px;
+        }
+        .whatd{
+            display: grid;
+            grid-area: whatd;
+            grid-template-areas:    'tagtext tagtext'
+                            'tag tag1'
+                            'tag2 tag3';
+        }
+        .tagtext{
+            grid-area: tagtext;
+        }
+        .itemborder{
+            border: 1px solid gray;
+            border-radius: 10px;
+            height: auto;
+            margin: 10px;
+        }
+        .itemtag{
+            background-size: 40px;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 40px;
+            margin-top: 10px;
+        }
+
+        .tag{
+            grid-template-areas:    'img'
+                            'text';
+            grid-area: tag;
+            margin: 5px;
+            text-align: center;
+        }
+        .img{
+            grid-area: img;
+            background-image: url("1.png");
+
+        }
+        .text{
+            grid-area: text;
+            word-break: break-all;
+
+        }
+        .tag1{
+            grid-template-areas:    'img1'
+                            'text1';
+            grid-area: tag1;
+
+        }
+        .img1{
+            grid-area: img1;
+            background-image: url("2.png");
+
+        }
+        .text1{
+            grid-area: text1;
+        }
+        .tag2{
+            grid-template-areas:    'img2'
+                            'text2';
+            grid-area: tag2;
+        }
+        .img2{
+            grid-area: img2;
+            background-image: url("3.png");
+        }
+        .text2{
+            grid-area: text2;
+        }
+        .tag3{
+            grid-template-areas:    'img3'
+                            'text3';
+            grid-area: tag3;
+        }
+        .img3{
+            grid-area: img3;
+            background-image: url("4.png");
+        }
+        .text3{
+            grid-area: text3;
+        }
+
+
+    </style>
+</head>
+<body>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <title>Title</title>
+    <title>Светико</title>
+    <link href="test2.css" rel="stylesheet" type="text/css">
 </head>
-<style>
-    body {
-        margin: 0;
-    }
-.aside {
-    float: left;
-    width:250px;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-.main {
-    margin-left: 250px;
-    border: 1px solid black;
-}
-.buttom {
-    justify-content: flex-end;
-    width: 50px;
-    margin-left: 250px;
-    border: 1px solid black;
-}
-.about {
-
-}
-
-</style>
 <body>
-    <div class="container">
-        <aside class="aside">
-         ASIDE
-        </aside>
-        <main class="main">
-            <buttom class="buttom">
-
-
-            </buttom>
-        </main>
+<div class="container" style="color: #6f6b6b">
+    <div class="rightside"></div>
+    <div class="item sidebar">
+        <div class="sidebaritem photo"></div>
+        <div class="sidebaritem name" style="font-size: 20px; justify-content: center">Светик <b>Омельченко</b></div>
+        <div class="sidebaritem dol">лалочка</div>
+        <div class="sidebaritem social">
+            <div class="social facebook"> </div>
+            <div class="social twitter"></div>
+            <div class="social linkedin"></div>
+        </div>
+        <div class="sidebaritem download">
+            <div class="downloadt">Download CV</div>
+            <div class="downloadimg"></div>
+        </div>
+        <div class="sidebar contacts">
+            <div class="contactsitem birthday"></div>
+            <div class="contactsitem geo"></div>
+            <div class="contactsitem email"></div>
+            <div class="contactsitem number"></div>
+            <div class="contactsitem skype"></div>
+            <div class="contacts birthdayt">29.10.2001</div>
+            <div class="contacts geot">Ukraine</div>
+            <div class="contacts emailt">lalochka@gmail.com</div>
+            <div class="contacts numbert">+380 (000) 00 00 00</div>
+            <div class="contacts skypet">lalochka</div>
+        </div>
     </div>
 
+    <div class="item button" style="font-size: 15px">
+        <div class="button about">ABOUT</div>
+        <div class="button resume">RESUME</div>
+        <div class="button portfolio">PORTFOLIO</div>
+        <div class="button blog">BLOG</div>
+        <div class="button contact">CONTACT</div></div>
+    <div class="item content">
+        <div class="content aboutme">
+            </b><big><big><b> About Me </b></big></big>
+            <p>I am interested in the latest
+                developments from the world
+                of technology, I have the
+                engineering thinking, I am
+                organized and attentive to
+                detail, I am able to convey
+                technical information in
+                understandable language.
+            </p>
+        </div>
+        <div class="content whatd">
+            <div class="whatd tagtext"></b><big><big><b>  Skills </b></big></big></div>
+            <div class="itemborder tag">
+                <div class="itemtag img"></div>
+                <div class="tag text"><p><b>Network</b></p><p>Basic knowledge about TCP/IP
+                    Network and Experience in installing and supporting
+                    various OS
+                </p></div>
+            </div>
+            <div class="itemborder tag1">
+                <div class="itemtag img1"></div>
+                <div class="tag text1"><p><b>Language skills</b></p>English – Pre-Intermediate
+                    <p>Ukrainian – Proficiency</p>
+                </div>
+            </div>
+            <div class="itemborder tag2">
+                <div class="itemtag img2"></div>
+                <div class="tag text2"><p><b>Office skills</b></p>Advanced Windows user and
+                    Professional user Microsoft Office</div>
+            </div>
+            <div class="itemborder tag3">
+                <div class="itemtag img3"></div>
+                <div class="tag text3"><p><b>Programming</b></p>Programming experience on C++ and
+                    Experience with databases (MS Access
+                    and SQL)</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
 </body>
 </html>
